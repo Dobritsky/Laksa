@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laksa & Wok — Доставка и ресторан</title>
+
+<style>
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#0b0b0b;
+    color:#fff;
+}
+
+.container {
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+}
+
+h1,h2,h3 {
+    margin:10px 0;
+}
+
+.btn {
+    display:inline-block;
+    padding:15px 25px;
+    margin:10px 5px;
+    background:#ff3c00;
+    color:#fff;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.btn-green {
+    background:#25D366;
+}
+
+.hero {
+    text-align:center;
+    padding:80px 20px;
+    background:url('https://images.unsplash.com/photo-1553621042-f6e147245754') center/cover;
+}
+
+.section {
+    padding:50px 20px;
+}
+
+.grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.menu-item {
+    display:flex;
+    justify-content:space-between;
+    border-bottom:1px solid #333;
+    padding:10px 0;
+}
+
+.highlight {
+    color:#ff3c00;
+    font-weight:bold;
+}
+
+.review {
+    background:#111;
+    padding:15px;
+    border-radius:8px;
+}
+
+@media(max-width:768px){
+    .grid {
+        grid-template-columns:1fr;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="container">
+        <h1>LAKSA & WOK</h1>
+        <h2>Паназиатская и итальянская кухня</h2>
+
+        <p class="highlight">🏆 Лучший Том Ям в Москве и МО</p>
+        <p>Победитель FoodGlobe 2022</p>
+
+        <a href="tel:+79260004015" class="btn">📞 Позвонить</a>
+        <a href="https://wa.me/79260004015" class="btn btn-green">WhatsApp</a>
+        <br>
+        <a href="#menu" class="btn">📖 Смотреть меню</a>
+    </div>
+</div>
+
+<!-- УТП -->
+<div class="section container">
+    <h2>Почему выбирают нас</h2>
+
+    <div class="grid">
+        <div>⚡ Готовим быстро — без потери качества</div>
+        <div>🍤 Только свежие продукты</div>
+        <div>🏆 Авторская кухня призёров соревнований</div>
+        <div>🚗 Доставка до 25 км</div>
+    </div>
+</div>
+
+<!-- ХИТ -->
+<div class="section container">
+    <h2>🔥 Наш главный хит</h2>
+    <h3>ТОМ ЯМ</h3>
+    <p>Тот самый суп, за которым к нам едят со всей области</p>
+    <p class="highlight">Попробуй один раз — будешь заказывать постоянно</p>
+</div>
+
+<!-- МЕНЮ -->
+<div id="menu" class="section container">
+    <h2>Меню</h2>
+
+    <h3>🍜 Супы</h3>
+    <div class="menu-item"><span>Том Ям</span><span>450 ₽</span></div>
+    <div class="menu-item"><span>Том Кха</span><span>420 ₽</span></div>
+
+    <h3>🍝 WOK</h3>
+    <div class="menu-item"><span>Лапша с курицей</span><span>350 ₽</span></div>
+    <div class="menu-item"><span>Лапша с креветками</span><span>450 ₽</span></div>
+
+    <h3>🍕 Пицца</h3>
+    <div class="menu-item"><span>Маргарита</span><span>400 ₽</span></div>
+    <div class="menu-item"><span>Пепперони</span><span>500 ₽</span></div>
+
+    <p class="highlight">👉 Полное меню уточняйте по телефону или WhatsApp</p>
+
+    <a href="tel:+79260004015" class="btn">Заказать сейчас</a>
+</div>
+
+<!-- ДОСТАВКА -->
+<div class="section container">
+    <h2>🚗 Доставка</h2>
+    <p>Доставка до 25 км от Истры</p>
+    <p class="highlight">Привезём быстрее, чем остынет</p>
+
+    <a href="tel:+79260004015" class="btn">Заказать</a>
+    <a href="https://wa.me/79260004015" class="btn btn-green">Написать в WhatsApp</a>
+</div>
+
+<!-- ОТЗЫВЫ -->
+<div class="section container">
+    <h2>Отзывы гостей</h2>
+
+    <div class="grid">
+        <div class="review">"Лучший том ям, который я пробовал"</div>
+        <div class="review">"Очень быстро и реально вкусно"</div>
+        <div class="review">"Лучше, чем во многих местах Москвы"</div>
+        <div class="review">"Пицца и вок — топ"</div>
+    </div>
+</div>
+
+<!-- КОНТАКТЫ -->
+<div class="section container">
+    <h2>Контакты</h2>
+    <p>📍 Истра, ул. Рябкина, д. 4</p>
+    <p class="highlight">Самый большой фуд-корт города</p>
+
+    <a href="tel:+79260004015" class="btn">Позвонить</a>
+    <a href="https://yandex.ru/maps/?text=Истра%20Рябкина%204" class="btn">Открыть карту</a>
+</div>
+
+<!-- ФИКС КНОПКИ -->
+<div style="position:fixed;bottom:20px;left:20px;">
+    <a href="tel:+79260004015" class="btn">📞</a>
+</div>
+
+<div style="position:fixed;bottom:20px;right:20px;">
+    <a href="https://wa.me/79260004015" class="btn btn-green">💬</a>
+</div>
+
+</body>
+</html>
