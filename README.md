@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laksa&Wok | Al Forno — Доставка еды Истра</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #0f0f0f;
+    color: #fff;
+}
+
+header {
+    padding: 40px;
+    text-align: center;
+    background: linear-gradient(180deg, #000, #111);
+}
+
+h1 {
+    font-size: 42px;
+    margin: 0;
+}
+
+.fire {
+    color: orange;
+    animation: flame 1s infinite alternate;
+}
+
+@keyframes flame {
+    from { text-shadow: 0 0 10px orange; }
+    to { text-shadow: 0 0 25px red; }
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: url('https://images.unsplash.com/photo-1604908176997-431e94b33d8b') center/cover;
+}
+
+.hero h2 {
+    font-size: 36px;
+    background: rgba(0,0,0,0.6);
+    display: inline-block;
+    padding: 20px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 20px 40px;
+    font-size: 20px;
+    background: red;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.price {
+    color: orange;
+    font-weight: 700;
+}
+
+.reviews {
+    background: #111;
+}
+
+.review {
+    margin: 20px auto;
+    max-width: 600px;
+    font-style: italic;
+}
+
+.footer {
+    text-align: center;
+    padding: 40px;
+    background: #000;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Laksa&Wok 🔥 + Al Forno 🍕</h1>
+    <p>Паназиатская и Итальянская кухня</p>
+</header>
+
+<section class="hero">
+    <h2>🔥 ЛУЧШИЙ ТОМ ЯМ В ИСТРЕ 🔥</h2>
+    <p>Победитель GlobalFood 2023</p>
+    <a class="btn" href="tel:89260004015">📞 Заказать сейчас</a>
+</section>
+
+<section class="section">
+    <h2>🍜 Паназиатская кухня</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Том Ям Кунг 🔥</h3>
+            <p>Креветки, кальмар, кокосовое молоко</p>
+            <p class="price">890 ₽</p>
+        </div>
+
+        <div class="card">
+            <h3>Сингапурская лакса</h3>
+            <p>Кокосовый бульон, лапша, креветки</p>
+            <p class="price">880 ₽</p>
+        </div>
+
+        <div class="card">
+            <h3>Пад Тай с креветками</h3>
+            <p>Рисовая лапша, тигровые креветки</p>
+            <p class="price">830 ₽</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>🍕 Итальянская кухня — Al Forno</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Неаполитанская пицца</h3>
+            <p>Дровяная печь, живое тесто</p>
+        </div>
+
+        <div class="card">
+            <h3>Паста карбонара</h3>
+            <p>Сливочный соус, пармезан</p>
+        </div>
+    </div>
+</section>
+
+<section class="section reviews">
+    <h2>⭐ Отзывы</h2>
+
+    <div class="review">“Лучший Том Ям который я пробовал!”</div>
+    <div class="review">“Очень вкусная лапша и быстрая доставка”</div>
+    <div class="review">“Пицца как в Италии!”</div>
+</section>
+
+<section class="section">
+    <h2>🚚 Доставка</h2>
+    <p>Быстрая доставка до 25 км</p>
+    <p>г. Истра, ул. Рябкина 4</p>
+    <p>⏰ 10:00 – 22:00</p>
+</section>
+
+<section class="section">
+    <h2>🔥 О нас</h2>
+    <p>Готовим на настоящем воке и в дровяной печи</p>
+    <p>Используем только свежие продукты</p>
+</section>
+
+<div class="footer">
+    <a class="btn" href="tel:89260004015">📞 Позвонить</a>
+</div>
+
+</body>
+</html>
