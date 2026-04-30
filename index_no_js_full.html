@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laksa&Wok | Al Forno Pizza — доставка Истра</title>
+<meta name="description" content="Laksa&Wok и Al Forno Pizza в Истре. Том Ям, WOK, рис, паста, неаполитанская пицца. Доставка до 25 км. Телефон 8 926 000 40 15.">
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  background:#080808;
+  color:#fff;
+  line-height:1.45;
+}
+a{text-decoration:none;color:inherit}
+.hero{
+  min-height:100vh;
+  padding:120px 18px 60px;
+  background:
+    linear-gradient(rgba(0,0,0,.68),rgba(0,0,0,.9)),
+    url("https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1600&q=85") center/cover;
+}
+.top{
+  position:fixed;
+  z-index:20;
+  top:12px;
+  left:12px;
+  right:12px;
+  padding:12px;
+  border-radius:28px;
+  background:rgba(0,0,0,.78);
+  backdrop-filter:blur(16px);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border:1px solid rgba(255,255,255,.16);
+}
+.logo{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  font-weight:900;
+}
+.logoIcon{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:conic-gradient(#ff2b1f,#ff8a00,#24c45a,#ff2b1f);
+  display:grid;
+  place-items:center;
+  animation:pulse 1.4s infinite alternate;
+}
+@keyframes pulse{to{transform:scale(1.08)}}
+.callSmall{
+  background:linear-gradient(135deg,#ff2b1f,#ff8a00);
+  padding:13px 16px;
+  border-radius:999px;
+  font-weight:900;
+}
+h1{
+  font-size:clamp(42px,12vw,90px);
+  line-height:.92;
+  margin:0 0 22px;
+  letter-spacing:-2px;
+}
+.gold{color:#ffd166}
+.lead{
+  font-size:22px;
+  max-width:780px;
+  color:#f1f1f1;
+}
+.btns{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin:30px 0;
+}
+.btn{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px 28px;
+  border-radius:999px;
+  font-size:20px;
+  font-weight:900;
+  background:linear-gradient(135deg,#ff2b1f,#ff8a00);
+  box-shadow:0 18px 40px rgba(255,73,0,.35);
+}
+.btn.secondary{
+  background:rgba(255,255,255,.11);
+  border:1px solid rgba(255,255,255,.22);
+  box-shadow:none;
+}
+.stats{
+  display:grid;
+  gap:14px;
+  margin-top:30px;
+}
+.stat{
+  padding:24px;
+  border-radius:28px;
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.14);
+}
+.stat b{
+  display:block;
+  font-size:36px;
+  color:#ffd166;
+}
+section{
+  padding:60px 18px;
+  max-width:1180px;
+  margin:auto;
+}
+h2{
+  font-size:clamp(36px,8vw,68px);
+  line-height:.95;
+  margin:0 0 26px;
+}
+h3{
+  font-size:32px;
+  margin:40px 0 16px;
+  padding-left:14px;
+  border-left:6px solid #ff8a00;
+}
+.award{
+  padding:28px;
+  border-radius:34px;
+  background:
+    linear-gradient(135deg,rgba(255,43,31,.22),rgba(255,138,0,.12)),
+    url("https://images.unsplash.com/photo-1609501676725-7186f734d3d3?auto=format&fit=crop&w=1300&q=85") center/cover;
+  overflow:hidden;
+  min-height:460px;
+  display:flex;
+  align-items:flex-end;
+}
+.awardBox{
+  background:rgba(0,0,0,.72);
+  padding:26px;
+  border-radius:26px;
+  backdrop-filter:blur(14px);
+  width:100%;
+}
+.awards{
+  display:grid;
+  gap:14px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  margin-top:18px;
+}
+.cert{
+  background:#fff0bf;
+  color:#17110a;
+  padding:18px;
+  border-radius:18px;
+  min-height:120px;
+  box-shadow:0 12px 30px rgba(0,0,0,.3);
+}
+.photos{
+  display:grid;
+  gap:14px;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+}
+.photo{
+  min-height:230px;
+  border-radius:28px;
+  overflow:hidden;
+  position:relative;
+  border:1px solid rgba(255,255,255,.14);
+}
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  position:absolute;
+  inset:0;
+}
+.photo span{
+  position:absolute;
+  left:14px;
+  bottom:14px;
+  padding:10px 14px;
+  border-radius:999px;
+  background:rgba(0,0,0,.72);
+  font-weight:900;
+}
+.menuNav{
+  position:sticky;
+  top:82px;
+  z-index:10;
+  display:flex;
+  gap:8px;
+  overflow:auto;
+  padding:10px;
+  border-radius:22px;
+  background:rgba(0,0,0,.86);
+  border:1px solid rgba(255,255,255,.14);
+  margin-bottom:26px;
+}
+.menuNav a{
+  white-space:nowrap;
+  padding:12px 16px;
+  border-radius:999px;
+  background:#1d1d1d;
+  font-weight:800;
+}
+.menuGrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  gap:14px;
+}
+.dish{
+  position:relative;
+  padding:20px;
+  min-height:150px;
+  border-radius:24px;
+  background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.04));
+  border:1px solid rgba(255,255,255,.12);
+}
+.dish h4{
+  margin:0 78px 10px 0;
+  font-size:19px;
+  line-height:1.15;
+  text-transform:uppercase;
+}
+.dish p{
+  margin:0;
+  color:#cfcfd6;
+}
+.price{
+  position:absolute;
+  top:14px;
+  right:14px;
+  padding:9px 12px;
+  border-radius:15px;
+  background:linear-gradient(135deg,#27c75a,#148a39);
+  font-size:20px;
+  font-weight:900;
+}
+.hot::after{
+  content:"🔥";
+  position:absolute;
+  bottom:14px;
+  right:18px;
+  font-size:26px;
+}
+.pizzaInfo{
+  background:
+    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.86)),
+    url("https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=1400&q=85") center/cover;
+  border-radius:34px;
+  padding:32px;
+  min-height:430px;
+  display:flex;
+  align-items:flex-end;
+}
+.reviewGrid,.infoGrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:14px;
+}
+.review{
+  background:#fff;
+  color:#111;
+  padding:24px;
+  border-radius:24px;
+}
+.stars{color:#ffb703;font-size:22px}
+.info{
+  padding:26px;
+  border-radius:28px;
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.13);
+}
+.bottom{
+  position:fixed;
+  z-index:30;
+  bottom:12px;
+  left:12px;
+  right:12px;
+  display:flex;
+  gap:10px;
+  padding:10px;
+  border-radius:24px;
+  background:rgba(0,0,0,.86);
+  backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,.16);
+}
+.bottom a{
+  flex:1;
+  text-align:center;
+  padding:16px 8px;
+  border-radius:18px;
+  font-weight:900;
+  background:#1e1e1e;
+}
+.bottom a:last-child{
+  background:linear-gradient(135deg,#ff2b1f,#ff8a00);
+}
+footer{
+  text-align:center;
+  padding:60px 18px 110px;
+  color:#cfcfcf;
+}
+@media(max-width:600px){
+  .hero{padding-top:130px}
+  .callSmall{font-size:0}
+  .callSmall:after{content:"☎";font-size:20px}
+  .btn{width:100%}
+}
+</style>
+</head>
+
+<body>
+
+<header class="top">
+  <a href="#top" class="logo">
+    <span class="logoIcon">🔥</span>
+    <span>Laksa&Wok<br><small>Al Forno Pizza</small></span>
+  </a>
+  <a class="callSmall" href="tel:+79260004015">Позвонить</a>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <h1>Две кухни.<br><span class="gold">Один мощный вкус.</span></h1>
+    <p class="lead">Паназиатская кухня Laksa&Wok и итальянская Al Forno Pizza: Том Ям, WOK-лапша, рис, паста и неаполитанская пицца из дровяной печи.</p>
+    <div class="btns">
+      <a class="btn" href="tel:+79260004015">☎ Позвонить и заказать</a>
+      <a class="btn secondary" href="#menu">Смотреть меню и цены</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>10:00–22:00</b>работаем каждый день</div>
+      <div class="stat"><b>до 25 км</b>быстрая доставка по Истринскому району</div>
+      <div class="stat"><b>2 кухни</b>Laksa&Wok + Al Forno Pizza</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="award">
+      <div class="awardBox">
+        <h2>Лучший Том Ям в Истре</h2>
+        <p class="lead">Главный хит Laksa&Wok. Насыщенный кокосовый бульон, морепродукты, лайм и фирменная острота.</p>
+        <div class="awards">
+          <div class="cert"><b>GlobalFood 2023</b><br>Победитель номинации «Лучший Том Ям»</div>
+          <div class="cert"><b>Top Taste</b><br>Фирменный рецепт Laksa&Wok</div>
+          <div class="cert"><b>Guest Choice</b><br>Любимый суп гостей</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Аппетитные хиты</h2>
+    <div class="photos">
+      <div class="photo"><img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=85"><span>Том Ям</span></div>
+      <div class="photo"><img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&w=800&q=85"><span>Лапша WOK</span></div>
+      <div class="photo"><img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=800&q=85"><span>Рис WOK</span></div>
+      <div class="photo"><img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=85"><span>Паста</span></div>
+      <div class="photo"><img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=85"><span>Пицца</span></div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <h2>Полное меню и цены</h2>
+
+    <nav class="menuNav">
+      <a href="#soups">Супы</a>
+      <a href="#noodles">Лапша WOK</a>
+      <a href="#rice">Рис WOK</a>
+      <a href="#main">Основные</a>
+      <a href="#snacks">Закуски</a>
+      <a href="#pasta">Паста</a>
+      <a href="#pizza">Пицца</a>
+    </nav>
+
+    <h3 id="soups">Супы Laksa&Wok</h3>
+    <div class="menuGrid">
+      <article class="dish hot"><div class="price">880</div><h4>Сингапурская лакса</h4><p>Кокосовое молоко, лапша удон, курица, тигровая креветка, яйцо, ростки сои, тофу, зелёный лук, мята.</p></article>
+      <article class="dish hot"><div class="price">840</div><h4>Вегги лакса</h4><p>Кокосовое молоко, рисовая лапша, фасоль, брокколи, ростки сои, тофу, зелёный лук, мята.</p></article>
+      <article class="dish hot"><div class="price">940</div><h4>Лакса лосось</h4><p>Кокосовое молоко, удон, лосось, яйцо, ростки сои, тофу, зелёный лук, мята.</p></article>
+      <article class="dish hot"><div class="price">890</div><h4>Том Ям Кунг</h4><p>Кокосовое молоко, креветка, белая рыба, кальмар, шампиньоны, кинза. Подаётся с рисом и лаймом.</p></article>
+      <article class="dish"><div class="price">760</div><h4>Рамен с курицей</h4><p>Куриное филе, лапша рамен, бульон, сливки, шиитаке, бамбук, вакаме, яйцо, кунжут.</p></article>
+      <article class="dish hot"><div class="price">780</div><h4>Рамен с говядиной</h4><p>Говядина, рамен, пряный бульон, шиитаке, муэр, бамбук, вакаме, яйцо, кунжут.</p></article>
+      <article class="dish"><div class="price">890</div><h4>Королевский рамен с морепродуктами</h4><p>Креветки, кальмар, мидии, муэр, бамбук, морковь, имбирь, красный лук, кокосовое молоко.</p></article>
+    </div>
+
+    <h3 id="noodles">Лапша WOK</h3>
+    <div class="menuGrid">
+      <article class="dish"><div class="price">780</div><h4>Яки Нику</h4><p>Лапша сомен, говяжья вырезка, шиитаке, муэр, онсен тамаго, кунжут, зелёный лук.</p></article>
+      <article class="dish"><div class="price">940</div><h4>Удон с морепродуктами и страчателлой</h4><p>Удон, тигровые креветки, гребешок, страчателла, тобико, фурикаке, устричный соус, сливки.</p></article>
+      <article class="dish"><div class="price">860</div><h4>Бакми Горенг</h4><p>Удон, филе цыплёнка, кешью, тигровые креветки, капуста, болгарский перец.</p></article>
+      <article class="dish"><div class="price">870</div><h4>Квей Тао</h4><p>Широкая рисовая лапша, мидии, кальмары, креветки, капуста, шампиньоны.</p></article>
+      <article class="dish hot"><div class="price">780</div><h4>Кунг Пао</h4><p>Яичная лапша, утиная грудка, болгарский перец, соус из чёрных бобов.</p></article>
+      <article class="dish"><div class="price">880</div><h4>Удон Якитори</h4><p>Удон, креветки, кальмар, муэр, бамбук, морковь, пекинская капуста, тобико.</p></article>
+      <article class="dish"><div class="price">730</div><h4>Яки Соба с говядиной и грибами</h4><p>Гречневая лапша, говяжья вырезка, шиитаке, муэр, эдамаме, кунжут.</p></article>
+      <article class="dish"><div class="price">730</div><h4>Удон с говядиной и грибами</h4><p>Удон, говяжья вырезка, шампиньоны, болгарский перец, брокколи, китайская капуста, морковь.</p></article>
+      <article class="dish"><div class="price">690</div><h4>Пад Тай с курицей</h4><p>Удон, филе цыплёнка, болгарский перец, брокколи, китайская капуста, морковь.</p></article>
+      <article class="dish"><div class="price">930</div><h4>Удон с лососем терияки</h4><p>Удон, лосось, фасоль стручковая, морковь, болгарский перец, брокколи.</p></article>
+      <article class="dish"><div class="price">650</div><h4>Вегги лапша</h4><p>Широкая рисовая лапша, болгарский перец, фасоль, морковь, брокколи, муэр.</p></article>
+      <article class="dish"><div class="price">830</div><h4>Пад Тай с креветками</h4><p>Рисовая лапша, тигровые креветки, болгарский перец, брокколи, китайская капуста, морковь.</p></article>
+      <article class="dish"><div class="price">690</div><h4>Сингапурская лапша с креветками</h4><p>Фунчоза, тигровые креветки, болгарский перец, яйцо, карри.</p></article>
+      <article class="dish"><div class="price">630</div><h4>Сингапурская лапша с курицей</h4><p>Фунчоза, филе цыплёнка, болгарский перец, яйцо, карри.</p></article>
+    </div>
+
+    <h3 id="rice">Рис WOK</h3>
+    <div class="menuGrid">
+      <article class="dish hot"><div class="price">680</div><h4>Жареный рис по-сингапурски</h4><p>Жасминовый рис с говяжьей вырезкой, зелёным горошком и соусом из чёрных бобов.</p></article>
+      <article class="dish hot"><div class="price">690</div><h4>Жареный рис по-индонезийски</h4><p>Рис с тигровыми креветками, филе цыплёнка, яйцом и соусом из чёрного перца.</p></article>
+      <article class="dish"><div class="price">760</div><h4>Рис теппан яки</h4><p>Жасминовый рис с дарами моря, болгарским перцем и яйцом.</p></article>
+      <article class="dish hot"><div class="price">630</div><h4>Рис с курицей и грибами</h4><p>Рис с куриным филе, шампиньонами и брокколи в соусе из чёрного перца.</p></article>
+      <article class="dish hot"><div class="price">630</div><h4>Вьетнамский рис</h4><p>Рис с филе цыплёнка и ананасами в остро-сладком соусе.</p></article>
+      <article class="dish"><div class="price">490</div><h4>Рис с яйцом</h4><p>Жасминовый рис, обжаренный с яйцом и луком.</p></article>
+      <article class="dish"><div class="price">580</div><h4>Ниннику тяхан</h4><p>Традиционный японский рис, обжаренный с чесноком.</p></article>
+      <article class="dish"><div class="price">590</div><h4>Вегги рис</h4><p>Рис с брокколи, болгарским перцем, морковью, цукини и фасолью.</p></article>
+      <article class="dish"><div class="price">200</div><h4>Гохан</h4><p>Жасминовый паровой рис.</p></article>
+    </div>
+
+    <h3 id="main">Основные блюда</h3>
+    <div class="menuGrid">
+      <article class="dish hot"><div class="price">940</div><h4>Говядина с чёрными бобами</h4><p>Говяжья вырезка с луком и чили в соусе из чёрных бобов. Подаётся с рисом.</p></article>
+      <article class="dish hot"><div class="price">940</div><h4>Говядина в соусе из чёрного перца</h4><p>Говяжья вырезка с луком и болгарским перцем. Подаётся с рисом.</p></article>
+      <article class="dish hot"><div class="price">840</div><h4>Тайский зелёный карри с курицей</h4><p>Куриное филе, зелёный карри, кокосовое молоко, баклажан, кинза, мята.</p></article>
+      <article class="dish"><div class="price">740</div><h4>Пряная курица Гунбао</h4><p>Куриное бедро в панко, шиитаке, арахис, соево-пряный соус. Подаётся с рисом.</p></article>
+      <article class="dish hot"><div class="price">840</div><h4>Цыплёнок в кисло-сладком соусе</h4><p>Филе цыплёнка, ананасы, сладкий перец, сладкий чили. Подаётся с рисом.</p></article>
+      <article class="dish hot"><div class="price">860</div><h4>Цыплёнок тайский динамит</h4><p>Филе цыплёнка, тайский перец чили, сладкий перец, морковь, кинза.</p></article>
+      <article class="dish"><div class="price">840</div><h4>Цыплёнок в кокосово-лаймовом соусе</h4><p>Филе цыплёнка, карри, кокосовое молоко, лемонграсс, лист лайма.</p></article>
+      <article class="dish"><div class="price">740</div><h4>Тилапия по-тайски</h4><p>Тилапия, сухари панко, кисло-сладкий соус. Подаётся с рисом.</p></article>
+      <article class="dish hot"><div class="price">870</div><h4>Жёлтый карри с ананасом и морепродуктами</h4><p>Креветки, кальмар, баклажан, ананасы, кокосовое молоко, карри, кинза.</p></article>
+      <article class="dish"><div class="price">860</div><h4>Свиные рёбрышки по-корейски</h4><p>Свиные рёбра, медово-соевый соус.</p></article>
+    </div>
+
+    <h3 id="snacks">Закуски, салаты, шашлычки</h3>
+    <div class="menuGrid">
+      <article class="dish"><div class="price">620</div><h4>Тайский салат с баклажаном</h4><p>Баклажан, черри, тофу, чеснок, кинза, кисло-сладкий соус.</p></article>
+      <article class="dish"><div class="price">680</div><h4>Ананасы по-индонезийски</h4><p>Ананасы темпура, кешью, сладкий чили, кинза, базилик, мята, нити чили.</p></article>
+      <article class="dish"><div class="price">590</div><h4>Бобы эдамаме с морской солью</h4><p>Классическая азиатская закуска.</p></article>
+      <article class="dish"><div class="price">730</div><h4>Креветки темпура</h4><p>Тигровые креветки в темпуре.</p></article>
+      <article class="dish"><div class="price">620</div><h4>Гедза с курицей</h4><p>6 штук.</p></article>
+      <article class="dish"><div class="price">690</div><h4>Гедза с креветкой</h4><p>6 штук.</p></article>
+      <article class="dish"><div class="price">470</div><h4>Огурцы суномоно</h4><p>Огурцы, соевый маринад, кунжут, кинза.</p></article>
+      <article class="dish"><div class="price">470</div><h4>Грибы муэр</h4><p>Грибы муэр, соево-чесночный соус.</p></article>
+      <article class="dish"><div class="price">580</div><h4>Шашлычки с курицей</h4><p>Шашлычки по-азиатски.</p></article>
+      <article class="dish"><div class="price">690</div><h4>Шашлычки с говядиной</h4><p>Шашлычки по-азиатски.</p></article>
+      <article class="dish"><div class="price">690</div><h4>Шашлычки с креветкой</h4><p>Шашлычки по-азиатски.</p></article>
+      <article class="dish"><div class="price">620</div><h4>Цезарь с курицей</h4><p>Айсберг, куриное филе, черри, пармезан, гренки, соус Цезарь.</p></article>
+      <article class="dish"><div class="price">740</div><h4>Цезарь с креветками</h4><p>Айсберг, тигровые креветки, черри, пармезан, гренки, соус Цезарь.</p></article>
+      <article class="dish"><div class="price">420</div><h4>Салат овощной домашний</h4><p>Помидоры, огурец, красный лук, оливковое масло.</p></article>
+    </div>
+
+    <h3 id="pasta">Паста</h3>
+    <div class="menuGrid">
+      <article class="dish"><div class="price">940</div><h4>Феттучини с лососем</h4><p>В сливочном соусе.</p></article>
+      <article class="dish"><div class="price">870</div><h4>Феттучини с грибами</h4><p>В сливочном соусе и трюфельной пастой.</p></article>
+      <article class="dish"><div class="price">780</div><h4>Паста Карбонара</h4><p>Классическая сливочная паста.</p></article>
+      <article class="dish"><div class="price">690</div><h4>Паста с вонголе и петрушкой</h4><p>Паста с вонголе и свежей петрушкой.</p></article>
+      <article class="dish"><div class="price">740</div><h4>Спагетти с песто и страчателлой</h4><p>Песто, страчателла, спагетти.</p></article>
+      <article class="dish"><div class="price">820</div><h4>Пенне с цыплёнком, сливками и песто</h4><p>Пенне, курица, сливочный соус и песто.</p></article>
+      <article class="dish"><div class="price">870</div><h4>Картофельные ньокки 4 сыра</h4><p>Моцарелла, чеддер, горгонзола, пармезан.</p></article>
+    </div>
+
+    <h3 id="pizza">Пицца Ø32 см</h3>
+    <div class="menuGrid">
+      <article class="dish"><div class="price">920</div><h4>Гавайская</h4><p>Соус рикотта, моцарелла, бекон, ветчина, куриное филе, ананасы.</p></article>
+      <article class="dish"><div class="price">920</div><h4>Куриная барбекю</h4><p>Соус рикотта, барбекю, моцарелла, куриное филе, бекон, перец, красный лук.</p></article>
+      <article class="dish"><div class="price">960</div><h4>Цезарь</h4><p>Соус Цезарь, моцарелла, куриное филе, айсберг, черри, пармезан.</p></article>
+      <article class="dish"><div class="price">840</div><h4>Пепперони</h4><p>Томатный соус, моцарелла, колбаса пепперони.</p></article>
+      <article class="dish"><div class="price">880</div><h4>Ветчина грибы</h4><p>Томатный соус, моцарелла, ветчина, шампиньоны, черри.</p></article>
+      <article class="dish"><div class="price">820</div><h4>Ветчина</h4><p>Томатный соус, моцарелла, ветчина.</p></article>
+      <article class="dish"><div class="price">740</div><h4>Маргарита</h4><p>Томатный соус, моцарелла, пармезан.</p></article>
+      <article class="dish"><div class="price">1150</div><h4>Семга с креветками</h4><p>Соус тар-тар, моцарелла, сёмга, креветки, черри, руккола, крем-бальзамик.</p></article>
+      <article class="dish"><div class="price">1250</div><h4>Морская</h4><p>Томаты, моцарелла, креветки, кальмар, гребешок, мидии, руккола.</p></article>
+      <article class="dish"><div class="price">1290</div><h4>С тунцом</h4><p>Соус тар-тар, моцарелла, тунец, красный лук, оливки, каперсы.</p></article>
+      <article class="dish"><div class="price">960</div><h4>Вегетарианская</h4><p>Томатный соус, моцарелла, шпинат, баклажаны, цукини, перец, шампиньоны, вяленые томаты, пармезан.</p></article>
+      <article class="dish"><div class="price">980</div><h4>Бруклин</h4><p>Соус тар-тар, моцарелла, говядина, бекон, айсберг, чеддер, черри, маринованные огурчики.</p></article>
+      <article class="dish hot"><div class="price">880</div><h4>Итальянская</h4><p>Томатный соус, моцарелла, пепперони, шампиньоны, халапеньо, маслины.</p></article>
+      <article class="dish"><div class="price">880</div><h4>Мексиканская</h4><p>Томатный соус, моцарелла, куриное филе, шампиньоны, халапеньо, перец, черри, красный лук, чили.</p></article>
+      <article class="dish"><div class="price">880</div><h4>Сицилиана</h4><p>Томатный соус, моцарелла, бекон, шпинат, оливки, красный лук, черри, пармезан.</p></article>
+      <article class="dish"><div class="price">970</div><h4>Деревенская</h4><p>Альфредо, моцарелла, бекон, говяжий фарш, перец, маринованные огурчики, красный лук.</p></article>
+      <article class="dish"><div class="price">960</div><h4>Мясная с говядиной</h4><p>Томатный соус, моцарелла, говядина, фарш, черри, маслины.</p></article>
+      <article class="dish"><div class="price">1050</div><h4>Мясное ассорти</h4><p>Томатный соус, моцарелла, свинина, говядина, пепперони, бекон, красный лук, вяленые томаты, маслины.</p></article>
+      <article class="dish"><div class="price">980</div><h4>Альфредо с курочкой</h4><p>Альфредо, моцарелла, куриное филе, шампиньоны, шпинат.</p></article>
+      <article class="dish"><div class="price">1050</div><h4>Горгонзола с грушей</h4><p>Рикотта, моцарелла, горгонзола, груша, грецкий орех, мёд.</p></article>
+      <article class="dish"><div class="price">980</div><h4>Страчателла и песто</h4><p>Томатный соус, моцарелла, страчателла, руккола, песто, пармезан.</p></article>
+      <article class="dish"><div class="price">1290</div><h4>Прошутто руккола</h4><p>Томатный соус, моцарелла, прошутто, крем-сыр, руккола.</p></article>
+      <article class="dish"><div class="price">1290</div><h4>Лосось руккола</h4><p>Сливочный соус, моцарелла, слабосолёный лосось, крем-сыр, руккола, оливки.</p></article>
+      <article class="dish"><div class="price">1190</div><h4>Мортаделла и страчателла</h4><p>Томатный соус, моцарелла, мортаделла, страчателла, фисташки.</p></article>
+      <article class="dish"><div class="price">1170</div><h4>Грибной mix с трюфельной пастой</h4><p>Сливочный соус, трюфельная паста, моцарелла, чеддер, ассорти лесных грибов.</p></article>
+      <article class="dish"><div class="price">960/990</div><h4>4 сыра / 4 сыра с трюфельной пастой</h4><p>Рикотта, моцарелла, чеддер, горгонзола, пармезан.</p></article>
+    </div>
+  </section>
+
+  <section>
+    <div class="pizzaInfo">
+      <div>
+        <h2>Неаполитанское тесто и дровяная печь</h2>
+        <p class="lead">Пицца Al Forno Pizza готовится на тонком неаполитанском тесте с воздушным бортиком. Дровяная итальянская печь даёт аромат живого огня и красивую корочку.</p>
+        <a class="btn" href="tel:+79260004015">Заказать пиццу</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Отзывы гостей</h2>
+    <div class="reviewGrid">
+      <div class="review"><div class="stars">★★★★★</div><b>Анна, Истра</b><p>Том Ям очень насыщенный, много морепродуктов и идеальная острота. Теперь заказываем только здесь.</p></div>
+      <div class="review"><div class="stars">★★★★★</div><b>Максим</b><p>Пицца горячая, тесто как в Италии, бортик воздушный. Доставка приехала быстро.</p></div>
+      <div class="review"><div class="stars">★★★★★</div><b>Елена</b><p>Удобно, что две кухни в одном месте: детям пасту и пиццу, нам WOK и супы.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Доставка и контакты</h2>
+    <div class="infoGrid">
+      <div class="info"><h3>Адрес</h3><p>Московская область, город Истра, улица Рябкина, дом 4.</p></div>
+      <div class="info"><h3>Режим работы</h3><p>Каждый день с 10:00 до 22:00.</p></div>
+      <div class="info"><h3>Доставка</h3><p>Быстрая доставка по Истринскому району до 25 км от города.</p></div>
+      <div class="info"><h3>Телефон</h3><p><a href="tel:+79260004015">8 926 000 40 15</a></p></div>
+    </div>
+  </section>
+</main>
+
+<div class="bottom">
+  <a href="#menu">Меню</a>
+  <a href="tel:+79260004015">☎ Заказать</a>
+</div>
+
+<footer>
+  <b>Laksa&Wok × Al Forno Pizza</b><br>
+  Истра, ул. Рябкина, 4 · 10:00–22:00 · 8 926 000 40 15
+</footer>
+
+</body>
+</html>
